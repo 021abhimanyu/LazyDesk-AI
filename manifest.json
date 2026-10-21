@@ -1,0 +1,10 @@
+{
+  "name": "LazyDesk AI",
+  "short_name": "LazyDesk",
+  "description": "A local-first gentle task planner powered by open-weight AI.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f4f0e8",
+  "theme_color": "#426b55",
+  "icons": []
+}

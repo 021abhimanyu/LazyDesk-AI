@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f0e8">
+  <title>LazyDesk AI — Slow and Steady</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="LazyDesk home"><span class="brand-mark">zZ</span><span>LazyDesk <em>AI</em></span></a>
+      <div class="local-pill"><span class="dot"></span><span id="privacyStatus">Your browser. Your data.</span></div>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">A LITTLE LESS BUSY · A LITTLE MORE LIFE</div>
+      <h1>Do less.<br><span>Feel caught up.</span></h1>
+      <p>Drop the mess in your head. Let your local AI turn it into a tiny, doable plan — no account, no cloud AI API, no guilt.</p>
+      <div class="hero-actions">
+        <button class="primary" id="focusInput">Unload your brain <span>↓</span></button>
+        <span class="micro">Made for slow-and-steady days 🦥</span>
+      </div>
+    </section>
+
+    <section class="workspace" aria-label="AI task helper">
+      <div class="panel input-panel">
+        <div class="panel-heading"><div><span class="step">01</span><h2>Unload your brain</h2></div><span class="icon">✍️</span></div>
+        <label for="brainDump">Everything you keep putting off</label>
+        <textarea id="brainDump" rows="7" placeholder="Reply to Sam, plan dinner, tidy downloads, book an appointment…"></textarea>
+        <div class="input-footer"><span id="charCount">0 characters</span><button class="text-button" id="exampleBtn">Try an example</button></div>
+        <div class="actions">
+          <button class="primary full" id="planBtn">Make it manageable <span>↗</span></button>
+          <button class="secondary full" id="draftBtn">Draft a message</button>
+        </div>
+        <p class="fineprint">AI runs in this tab using an open-weight model. The first model download needs internet; after caching, availability offline depends on your browser.</p>
+      </div>
+
+      <div class="panel output-panel">
+        <div class="panel-heading"><div><span class="step">02</span><h2>Your softer plan</h2></div><span class="icon">🌱</span></div>
+        <div class="status-line"><span class="status-dot" id="statusDot"></span><span id="modelStatus">AI is resting. Ready when you are.</span></div>
+        <div id="output" class="output empty">
+          <div class="empty-art">☁️</div>
+          <h3>Nothing to solve all at once.</h3>
+          <p>Your plan will appear here, in small steps. Start with one thing. Or take a break first.</p>
+        </div>
+        <div class="output-tools">
+          <button class="secondary" id="copyBtn" disabled>Copy plan</button>
+          <button class="text-button" id="clearBtn">Clear</button>
+        </div>
+        <div class="model-note"><span class="lock">◈</span><div><strong>Local-first by design</strong><p>Your text is sent to the model running in your browser, not to an AI service. Nothing is saved unless you choose to copy it.</p></div></div>
+      </div>
+    </section>
+
+    <section class="how">
+      <div><span class="how-icon">🧠</span><h3>Open-weight AI</h3><p>Uses Qwen2.5 0.5B through Transformers.js, running in your browser.</p></div>
+      <div><span class="how-icon">🫧</span><h3>Gentle by default</h3><p>Turns a messy list into a few small next steps, not a productivity marathon.</p></div>
+      <div><span class="how-icon">🔒</span><h3>Your words stay local</h3><p>No API key, account, or application backend is required.</p></div>
+    </section>
+    <footer><span>LazyDesk AI</span><span>Built for the <strong>Slow and Steady</strong> challenge · Rest is productive, too.</span></footer>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
